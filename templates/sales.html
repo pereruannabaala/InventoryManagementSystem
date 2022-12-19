@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/css/styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">IMS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      <a class="nav-link" href="/products">Dashboard</a>
+                      <a class="nav-link" href="/sales">Sales</a>
+                      <a class="nav-link disabled">Inventories</a>
+                      <a class="nav-link disabled">Stock</a>
+                    </div>
+                  </div>
+            </div>
+        </nav>
+        <div class="modal fade" tabindex="-1" id="salesmodal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="form-floating">
+                            <input id="pname"class="form-control" placeholder="Enter Product Name">
+                            <label for="pname">Pid</label>
+                        </div>
+                        <br>
+                        <div class="form-floating">
+                            <input id="bprice"class="form-control" placeholder="Enter Buying Price">
+                            <label for="bprice">Quantity</label>
+                        </div>
+                        <br>
+                        <div class="form-floating">
+                            <input id="sprice"class="form-control" placeholder="Enter Selling Price">
+                            <label for="pname">Created At</label>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="text-area">
+            <div class="area">
+                <div class="text">
+                    <h1>Sales</h1>
+                </div>
+                <div class="flex">
+                    <div class="parag">
+                        <p>Update and delete sales</p>
+                    </div>
+                    <div class="addsale">
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#salesmodal"><i class="fa fa-plus" aria-hidden="true"> </i>Add Items</button>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">PID</th>
+                            <th scope="col">QUANTITY</th>
+                            <th scope="col">CREATED AT</th>
+                            <th scope="col">Sale</th>
+                            <th scope="col">Edit</th>
+                            <th scope="col">Delete</th>
+                          </tr>
+                        </thead>
+                        <tbody class="table-group-divider">
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>5</td>
+                                <td>3:40pm</td>
+                                <td><i class="fa fa-credit-card-alt" aria-hidden="true" style="color:yellow"></i></td>
+                                <td><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:dodgerblue"></i></td>
+                                <td><i class="fa fa-trash" aria-hidden="true" style="color:red"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>2</td>
+                                <td>5:30pm</td>
+                                <td><i class="fa fa-credit-card-alt" aria-hidden="true" style="color:yellow"></i></td>
+                                <td><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:dodgerblue"></i></td>
+                                <td><i class="fa fa-trash" aria-hidden="true" style="color:red"></i></td>
+                            </tr>       
+                          <tbody class="table-group-divider"></tbody>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    
+
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -11,6 +11,11 @@ def home():
 def products():
     return render_template('products.html')
 
+@app.route('/sales')
+def sales():
+    return render_template('sales.html')
+
+
 
 
 if __name__ == "__main__":
