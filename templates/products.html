@@ -9,6 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="../static/css/styles.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
         <style>
             body {
               height:100%;
@@ -121,35 +122,25 @@
                                 <th scope="col">B.P</th>
                                 <th scope="col">S.P</th>
                                 <th scope="col">QUANTITY</th>
-                                <th scope="col">CATEGORY</th>
                                 <th scope="col">Sale</th>
                                 <th scope="col">Edit</th>
                                 <th scope="col">Delete</th>
                               </tr>
                             </thead>
                             <tbody class="table-group-divider">
+                                {% for i in rows %}
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Bag(Laptop)</td>
-                                    <td>2000.0</td>
-                                    <td>2500.0</td>
-                                    <td>3</td>
-                                    <td>product</td>
-                                    <td><i class="fa fa-credit-card-alt" aria-hidden="true" style="color:yellow"></i></td>
-                                    <td><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:dodgerblue"></i></td>
-                                    <td><i class="fa fa-trash" aria-hidden="true" style="color:red"></i></td>
+                                    <th scope="row">{{ i[0] }}</th>
+                                    <td>{{ i[1] }}</td>
+                                    <td>{{ i[2] }}</td>
+                                    <td>{{ i[3] }}</td>
+                                    <td>{{ i[4] }}</td>
+                                    <td>{{ i[5] }}<i class="fa fa-credit-card-alt" aria-hidden="true" style="color:yellow"></i></td>
+                                    <td>{{ i[6] }}<i class="fa fa-pencil-square-o" aria-hidden="true" style="color:dodgerblue"></i></td>
+                                    <td>{{ i[7] }}<i class="fa fa-trash" aria-hidden="true" style="color:red"></i></td>
                                 </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Repair</td>
-                                    <td>150.0</td>
-                                    <td>200.0</td>
-                                    <td>1</td>
-                                    <td>Service</td>
-                                    <td><i class="fa fa-credit-card-alt" aria-hidden="true" style="color:yellow"></i></td>
-                                    <td><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:dodgerblue"></i></td>
-                                    <td><i class="fa fa-trash" aria-hidden="true" style="color:red"></i></td>
-                                </tr>       
+                                {% endfor %}
+              
                               <tbody class="table-group-divider"></tbody>
                             </tbody>
                         </table>
