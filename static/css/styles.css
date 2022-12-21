@@ -64,7 +64,7 @@
     display:grid;
     grid-template-columns: 500px auto;
     height: 100%;
-    overflow: hidden;
+    width:100%;
 }
 #menu{
     background-color:dodgerblue;
@@ -124,7 +124,7 @@
 .text-area{
     width:100%;
     height:100%;
-    background-color:white;
+    margin-left:none;
 }
 .area{
     width: 70%;
