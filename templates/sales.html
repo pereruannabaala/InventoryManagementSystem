@@ -39,27 +39,26 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="#">
+                  <form action="/add_sales" method="POST">
                         <div class="form-floating">
-                            <input id="pname"class="form-control" placeholder="Enter Product Name">
-                            <label for="pname">Pid</label>
+                          <select name="pid">
+                            {% for i in products %}
+                            <option value="{{i[0]}}">{{i[1]}}</option>
+                            {% endfor %}
+                          </select>
                         </div>
                         <br>
                         <div class="form-floating">
-                            <input id="bprice"class="form-control" placeholder="Enter Buying Price">
-                            <label for="bprice">Quantity</label>
+                            <input name="quantity" class="form-control" type="number" placeholder="Enter Quantity">
+                            <label for="quantity">Quantity</label>
                         </div>
                         <br>
-                        <div class="form-floating">
-                            <input id="sprice"class="form-control" placeholder="Enter Selling Price">
-                            <label for="pname">Created At</label>
-                        </div>
-                        <br>
-                    </form>
+                        <input type="submit" class="btn btn-primary"></input>
+                  </form>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save</button>
+                  
                 </div>
               </div>
             </div>

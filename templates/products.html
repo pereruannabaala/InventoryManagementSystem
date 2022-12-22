@@ -76,12 +76,12 @@
                                 <br>
                                 <div class="form-floating">
                                     <input name="sprice"class="form-control" type="number" placeholder="Enter Selling Price">
-                                    <label for="pname">Selling Price</label>
+                                    <label for="sprice">Selling Price</label>
                                 </div>
                                 <br>
                                 <div class="form-floating">
                                     <input name="squantity"class="form-control" type="number" placeholder="Enter Stock Quantity">
-                                    <label for="quantity">Stock Quantity</label>
+                                    <label for="squantity">Stock Quantity</label>
                                 </div>
                                 <br>
                                 <input type="submit" class="btn btn-primary"></input>
@@ -111,7 +111,7 @@
                               </tr>
                             </thead>
                             <tbody class="table-group-divider">
-                                {% for i in products %}
+                                {% for i in rows %}
                                 <tr>
                                     <th scope="row">{{ i[0] }}</th>
                                     <td>{{ i[1] }}</td>
@@ -137,8 +137,6 @@
         
         </div>
     
-
-
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="//cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
