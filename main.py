@@ -63,7 +63,7 @@ def add_sales():
     cur.execute(h,sales)
     conn.commit()
     return redirect('/sales')
-    
+
 
 @app.route('/dashboard')
 def dashboard():
@@ -86,5 +86,5 @@ def dashboard():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
  
